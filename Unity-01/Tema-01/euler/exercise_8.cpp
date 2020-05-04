@@ -1029,8 +1029,9 @@ int main(int argc, char const *argv[])
       5,
       0,
   };
-  int account{0}, result{0}, higher{0};
-  int limit = 13, total = 5832;
+  int account{0};
+  long int result{0}, higher{0};
+  int limit = 13;
   int size = sizeof(numbers) / sizeof(numbers[0]);
   for (int i = account; i < size; i++)
   {
@@ -1043,8 +1044,6 @@ int main(int argc, char const *argv[])
         higher = result;
       }
     }
-    printf("%i\n", result);
-
     printf("%i %i\n", account, limit);
     if (limit < 999)
     {
@@ -1056,7 +1055,7 @@ int main(int argc, char const *argv[])
       break;
     }
   }
-  printf("El mayor producto es  %i.\n", higher);
+  printf("El mayor producto es  %li.\n", higher);
 
   return 0;
 }
