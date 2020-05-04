@@ -1,1 +1,5 @@
 *.out
+*.json
+*.vscode
+*tempCodeRunnerFile
+tempCodeRunnerFile.cpp
