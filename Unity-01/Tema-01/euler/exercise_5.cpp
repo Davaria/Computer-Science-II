@@ -4,13 +4,17 @@
 #include <iostream>
 #include <stdbool.h>
 
-bool smallMultiple(long long int number);
+bool smallMultiple(long long int number, int limit);
 int main(int argc, char const *argv[])
 {
-  // int number = 2520;
-  for (long long int i = 12252240;; i++)
+  const long long int NUMBERLIMIT = 12252240;
+  // const long long int NUMBERLIMIT = 2520;
+  const int LIMIT = 20;
+  // const int LIMIT = 10;
+
+  for (long long int i = NUMBERLIMIT;; i++)
   {
-    if (smallMultiple(i))
+    if (smallMultiple(i, LIMIT))
     {
       printf("El multiplo mas pequeño es %lli.\n", i);
       break;
@@ -19,21 +23,15 @@ int main(int argc, char const *argv[])
 
   return 0;
 }
-bool smallMultiple(long long int number)
+bool smallMultiple(long long int number, int limit)
 {
-  const int LIMIT = 20;
   int account{0};
-  for (long long int i = 1; i <= LIMIT; i++)
+  for (long long int i = 1; i <= limit; i++)
   {
     if (number % i == 0)
       account++;
   }
-  if (account == LIMIT)
-  {
+  if (account == limit)
     return true;
-  }
-  else
-  {
-    return false;
-  }
+  return false;
 }

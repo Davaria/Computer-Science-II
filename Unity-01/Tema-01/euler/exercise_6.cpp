@@ -9,7 +9,8 @@
 // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 #include <iostream>
 
-void SumSquares(int number, int accountA, int accountB) {
+void SumSquares(int number, int accountA, int accountB)
+{
   for (int i = 1; i <= number; i++)
   {
     accountA += (i * i);
@@ -17,15 +18,12 @@ void SumSquares(int number, int accountA, int accountB) {
   }
   accountB *= accountB;
   printf("%i\n", accountB - accountA);
-
 }
-
 
 int main(int argc, char const *argv[])
 {
   int number = 100, accountA{0}, accountB{0};
-  SumSquares(number,accountA, accountB);
+  SumSquares(number, accountA, accountB);
 
   return 0;
 }
-

@@ -9,27 +9,30 @@
 #include <iostream>
 #include <math.h>
 
-void sqrt_original(float number);
 int main(int argc, char const *argv[])
 {
-  float a{0}, b{0}, result = 1000;
-  float c{0};
+  float a{0}, b{0}, c{0};
+  int result = 1000;
   bool isStatus = false;
   for (int i = 100; i < 1000; i++)
   {
-    float sum = 0;
+    int sum = 0;
     for (int j = 1; j < i; j++)
     {
       if (i > j)
       {
+        // a < b < c
         a = j;
         b = i;
         printf("%f %f = ", a, b);
         c = pow(i, 2) + pow(j, 2);
+        // bug aqui se agregue/desgine si no es una raiz perfecta
         c = sqrt(c);
+        // bug aqui
+
         printf("%f -> ", c);
         sum = a + b + c;
-        printf("%f\n", sum);
+        printf("%i\n", sum);
         if (c > b && b > a)
         {
           if (sum == result)
@@ -49,15 +52,3 @@ int main(int argc, char const *argv[])
 
   return 0;
 }
-
-// int sizeNumber(int number)
-// {
-//   int aux = number;
-//   int account{0};
-//   while (aux)
-//   {
-//     account += 1;
-//     aux /= 10;
-//   }
-//   return account;
-// }
