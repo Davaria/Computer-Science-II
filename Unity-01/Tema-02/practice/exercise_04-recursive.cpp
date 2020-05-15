@@ -5,6 +5,7 @@ int size(char *array);
 int main(int argc, char const *argv[])
 {
   int total{0};
+  // char* helloWorld = new char[]
   char helloWorld[] = {'H', 'o', 'l', 'a', 'm', 'u', 'n', 'd', 'o', '!', '\0'};
   // puntero a char el cual recibe la direccion del primer elemento de helloWorld
   char *CPointer = helloWorld;

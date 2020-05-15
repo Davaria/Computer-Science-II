@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
   char data[20];
   cin.getline(data, 20);
   total = size(data);
-
+  printf("%i\n", total);
   printf("El tamaño total de la cadena es %i.\n", total);
 
   return 0;

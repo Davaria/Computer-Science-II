@@ -8,7 +8,7 @@ void concat(char *arrayA, char *arrayB);
 
 int main(int argc, char const *argv[])
 {
-  // puntero a char, el cual va a tener 20 direcciones de memoria
+  // puntero a char, el cual va a contener 20 direcciones de memoria
   char *dataA = new char[20], *dataB = new char[20];
 
   printf("Ingrese datos a las cadenas A:\n");
@@ -29,7 +29,6 @@ void concat(char *arrayA, char *arrayB)
   lengthB = size(arrayB);
 
   // bucle
-  // Va iterar mientras sea menor que el tamaño de arrayB
   // El cual vamos a asignar sus valores a el arrayA
   for (int i = 0; i < lengthB; i++)
   {
