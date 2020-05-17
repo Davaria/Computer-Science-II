@@ -22,10 +22,10 @@ int reverseValues(int *array, int size)
   {
     return 0;
   }
-  // printf("%d %d\n", *(array++), *(array + (size-- - 1)));
-  printf("%i\n", --size);
-  swap(*(array++), *(array + ((size))));
+  int *ptra = array + (--size);
 
+  // printf("%d %d\n", *(array++), *(ptra));
+  swap(*(array++), *(ptra));
   reverseValues(array, (--size));
 }
 
