@@ -16,6 +16,9 @@ int main(int argc, char const *argv[])
   printf("%i\n", size(stringB));
   showValues(stringB, size(stringB));
 
+  delete stringA;
+  delete stringB;
+
   return 0;
 }
 

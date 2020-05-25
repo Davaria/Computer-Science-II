@@ -22,17 +22,17 @@ void bubbleSort(int *array, int size)
   bool status;
   for (size_t i = 0; i < size; i++)
   {
-    int *Pstart = array;
-    int *Pend = array;
+    int *ptrstart = array;
+    int *ptrend;
     status = true;
     for (size_t j = 0; j < size - 1 - i; j++)
     {
-      if (*(Pstart) > *(++Pstart))
+      if (*(ptrstart) > *(++ptrstart))
       {
-        Pend = array + j;
-        // printf("%d - %d\n", *(++Pend), *(Pend));
-        // swap(*(--Pend), *(Pend));
-        swap(*(++Pend), *(Pend));
+        ptrend = array + j;
+        // printf("%d - %d\n", *(++ptrend), *(ptrend));
+        // swap(*(--ptrend), *(ptrend));
+        swap(*(++ptrend), *(ptrend));
         status = false;
       }
     }

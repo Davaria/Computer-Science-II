@@ -1,32 +1,34 @@
 #include <iostream>
 void swap(int &, int &);
-int reverseValues(int *, int);
+int reverseValues(int *, int *);
 void printArray(int *, int);
+
+using namespace std;
 
 int main(int argc, char const *argv[])
 {
-  int *ptri, len{0}, total{0};
+  int *ptrstart, *ptrfinal, len{0};
   int integers[] = {1, 2, 3, 4, 5, 6, 7};
-  ptri = integers;
   len = sizeof(integers) / sizeof(integers[0]);
 
-  reverseValues(ptri, len);
-  printArray(ptri, len);
+  ptrstart = integers;
+  ptrfinal = integers + (len - 1);
+
+  reverseValues(ptrstart, ptrfinal);
+  printArray(ptrstart, len);
 
   return 0;
 }
 
-int reverseValues(int *array, int size)
+int reverseValues(int *arrayA, int *arrayB)
 {
-  if (!(size / 2))
+  if (arrayA >= arrayB)
   {
     return 0;
   }
-  int *ptra = array + (--size);
 
-  // printf("%d %d\n", *(array++), *(ptra));
-  swap(*(array++), *(ptra));
-  reverseValues(array, (--size));
+  swap(*(arrayA), *(arrayB));
+  reverseValues(++arrayA, --arrayB);
 }
 
 void swap(int &a, int &b)
