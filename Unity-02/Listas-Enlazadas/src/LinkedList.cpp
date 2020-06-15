@@ -47,7 +47,6 @@ void LinkedList::insert(int value)
       temp->setNext(cursor);
       previous->setNext(temp);
     }
-    // delete temp;
   }
   size++;
 }
