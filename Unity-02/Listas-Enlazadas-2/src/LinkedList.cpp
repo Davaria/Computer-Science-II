@@ -60,29 +60,25 @@ template<typename T>
 void LinkedList<T>::remove(int index)
 {
   Nodo<T> *cursor = head;
-  if (index != 0)
+  if (index >= 0 && index <= size)
   {
     for (int i = 0; i < --index; i++)
       cursor = cursor->getNext();
     Nodo<T> *NodoRem = cursor->getNext();
     cursor->setNext(NodoRem->getNext());
     cursor = NodoRem;
+    size--;
   }
-  else
-    head = head->getNext();
-  delete cursor;
-  size--;
 }
 
 template<typename T>
 void LinkedList<T>::print()
 {
-  Nodo<T> *cursor = head;
-
+  it = head;
   for (int i = 0; i <= size - 1; i++)
   {
-    cout << cursor->getElement() << "  ";
-    cursor = cursor->getNext();
+    cout << *(it) << " ";
+    ++it;
   }
   cout << endl;
 }

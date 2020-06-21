@@ -22,6 +22,6 @@ bool Iterator<T>::operator==(Nodo<T>* node){
 
 template<typename T>
 bool Iterator<T>::operator!=(Nodo<T>* node){
-  return (ptrNode != node);
+  return (ptrNode->getNext() != node->getNext());
 }
 

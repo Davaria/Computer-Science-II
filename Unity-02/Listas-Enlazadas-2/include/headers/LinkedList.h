@@ -1,6 +1,7 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 #include "Nodo.h"
+#include "Iterator.h"
 using namespace std;
 
 template<typename T>
@@ -8,6 +9,7 @@ class LinkedList
 {
   Nodo<T> *head;
   Nodo<T> *finalList;
+  Iterator<T> it;
   int size;
 
 public:

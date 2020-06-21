@@ -15,6 +15,7 @@ int main(int argc, char const *argv[])
   intPtr->insert(2);
   intPtr->insert(1);
   intPtr->insert(7);
+  intPtr->remove(20);
   intPtr->print();
   intPtr->remove(3);
   intPtr->print();
@@ -34,12 +35,12 @@ int main(int argc, char const *argv[])
   // cout << it.operator*();
   // it.operator++();
   // cout << it.operator*();
-  it=intPtr->endList();
+  // it=intPtr->endList();
   
-  if(it == intPtr->beginList())
-    cout << *(it);
-  else
-    cout << "No son iguales";
+  // if(it == intPtr->beginList())
+  //   cout << *(it);
+  // else
+  //   cout << "No son iguales";
 
   // for (it = intPtr->beginList(); it != intPtr->endList(); it.operator++())
   // {
