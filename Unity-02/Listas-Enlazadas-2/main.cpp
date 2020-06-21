@@ -1,10 +1,13 @@
 #include <iostream>
 #include "./src/LinkedList.cpp"
 #include "./src/Nodo.cpp"
+#include "./src/Iterator.cpp"
+
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
+  Iterator<int> it;
   LinkedList<int> *intPtr = new LinkedList<int>(6);
   intPtr->insert(5);
   intPtr->insert(4);
@@ -27,5 +30,21 @@ int main(int argc, char const *argv[])
   floatPtr->remove(3);
   floatPtr->print();
 
+  // it=intPtr->beginList();
+  // cout << it.operator*();
+  // it.operator++();
+  // cout << it.operator*();
+  it=intPtr->endList();
+  
+  if(it == intPtr->beginList())
+    cout << *(it);
+  else
+    cout << "No son iguales";
+
+  // for (it = intPtr->beginList(); it != intPtr->endList(); it.operator++())
+  // {
+  //   cout << *(it);
+  // }
+  
   return 0;
 }

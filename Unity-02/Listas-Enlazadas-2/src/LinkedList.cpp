@@ -4,6 +4,7 @@ template<typename T>
 LinkedList<T>::LinkedList()
 {
   head = nullptr;
+  finalList = nullptr;
   size = 0;
 }
 
@@ -11,6 +12,7 @@ template<typename T>
 LinkedList<T>::LinkedList(T value)
 {
   head = new Nodo<T>(value);
+  finalList = nullptr;
   size = 1;
 }
 
@@ -83,4 +85,15 @@ void LinkedList<T>::print()
     cursor = cursor->getNext();
   }
   cout << endl;
+}
+template<typename T>
+Nodo<T>* LinkedList<T>::beginList()
+{
+  return head;
+}
+
+template<typename T>
+Nodo<T>* LinkedList<T>::endList()
+{
+  return finalList;
 }

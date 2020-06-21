@@ -7,6 +7,7 @@ template<typename T>
 class LinkedList
 {
   Nodo<T> *head;
+  Nodo<T> *finalList;
   int size;
 
 public:
@@ -16,6 +17,9 @@ public:
   void insert(T);
   void remove(int);
   void print();
+  Nodo<T> *beginList();
+  Nodo<T> *endList();
+
 };
 
 #endif
