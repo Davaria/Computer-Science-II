@@ -31,21 +31,11 @@ int main(int argc, char const *argv[])
   floatPtr->remove(3);
   floatPtr->print();
 
-  // it=intPtr->beginList();
-  // cout << it.operator*();
-  // it.operator++();
-  // cout << it.operator*();
-  // it=intPtr->endList();
-  
-  // if(it == intPtr->beginList())
-  //   cout << *(it);
-  // else
-  //   cout << "No son iguales";
 
-  // for (it = intPtr->beginList(); it != intPtr->endList(); it.operator++())
-  // {
-  //   cout << *(it);
-  // }
+  for (it = intPtr->beginList(); it != intPtr->endList(); it.operator++())
+  {
+    cout << *(it);
+  }
   
   return 0;
 }

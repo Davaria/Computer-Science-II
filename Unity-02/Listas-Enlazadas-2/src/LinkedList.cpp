@@ -40,6 +40,7 @@ void LinkedList<T>::insert(T value)
     {
       previous = cursor;
       cursor = cursor->getNext();
+
     }
     Nodo<T> *temp = new Nodo<T>(value);
     if (previous == nullptr)
@@ -63,12 +64,16 @@ void LinkedList<T>::remove(int index)
   if (index >= 0 && index <= size)
   {
     for (int i = 0; i < --index; i++)
-      cursor = cursor->getNext();
+      cursor = cursor->getNext(); 
     Nodo<T> *NodoRem = cursor->getNext();
     cursor->setNext(NodoRem->getNext());
     cursor = NodoRem;
     size--;
+  }else
+  {
+    cout << "El indice no existe" <<endl;
   }
+  
 }
 
 template<typename T>

@@ -7,8 +7,7 @@ using namespace std;
 template<typename T>
 class LinkedList
 {
-  Nodo<T> *head;
-  Nodo<T> *finalList;
+  Nodo<T> *head, *finalList;
   Iterator<T> it;
   int size;
 
