@@ -1,5 +1,10 @@
 #include "../include/headers/Nodo.h"
-
+template<typename T>
+Nodo<T>::Nodo()
+{
+	elem = 0;
+	next = nullptr;
+}
 template<typename T>
 Nodo<T>::Nodo(T number)
 {

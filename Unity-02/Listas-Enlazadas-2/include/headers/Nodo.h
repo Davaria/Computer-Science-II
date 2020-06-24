@@ -9,6 +9,7 @@ class Nodo
 	Nodo *next;
 
 public:
+	Nodo();
 	Nodo(T);
 	T getElement();
 	void setElement(T);

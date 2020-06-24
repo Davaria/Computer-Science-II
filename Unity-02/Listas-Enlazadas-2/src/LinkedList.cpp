@@ -4,7 +4,7 @@ template<typename T>
 LinkedList<T>::LinkedList()
 {
   head = nullptr;
-  finalList = nullptr;
+  finalList = new Nodo<T>();
   size = 0;
 }
 
@@ -12,7 +12,7 @@ template<typename T>
 LinkedList<T>::LinkedList(T value)
 {
   head = new Nodo<T>(value);
-  finalList = nullptr;
+  finalList = new Nodo<T>();
   size = 1;
 }
 
@@ -69,11 +69,19 @@ void LinkedList<T>::remove(int index)
     cursor->setNext(NodoRem->getNext());
     cursor = NodoRem;
     size--;
-  }else
-  {
-    cout << "El indice no existe" <<endl;
   }
-  
+}
+template<typename T>
+void LinkedList<T>::printIterator(){
+  it = this->beginList();
+
+  do
+  {
+    cout << *(it) << " ";
+    ++it;
+  } while (it != this->endList());
+
+  cout << *(it) << endl;  
 }
 
 template<typename T>
@@ -87,6 +95,8 @@ void LinkedList<T>::print()
   }
   cout << endl;
 }
+
+
 template<typename T>
 Nodo<T>* LinkedList<T>::beginList()
 {

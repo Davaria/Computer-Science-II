@@ -7,7 +7,8 @@ using namespace std;
 template<typename T>
 class LinkedList
 {
-  Nodo<T> *head, *finalList;
+  Nodo<T> *head;
+  Nodo<T> *finalList;
   Iterator<T> it;
   int size;
 
@@ -18,6 +19,7 @@ public:
   void insert(T);
   void remove(int);
   void print();
+  void printIterator();
   Nodo<T> *beginList();
   Nodo<T> *endList();
 
