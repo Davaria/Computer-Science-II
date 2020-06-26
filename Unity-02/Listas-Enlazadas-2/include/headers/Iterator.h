@@ -5,7 +5,6 @@
 template<typename T>
 class Iterator
 {
-	T elem;
 	Nodo<T> *ptrNode;
 
 public:

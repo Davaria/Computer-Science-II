@@ -2,7 +2,7 @@
 template<typename T>
 Nodo<T>::Nodo()
 {
-	elem = 0;
+	// elem = NULL;
 	next = nullptr;
 }
 template<typename T>

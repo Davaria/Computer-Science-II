@@ -13,7 +13,7 @@ LinkedList<T>::LinkedList(T value)
 {
   head = new Nodo<T>(value);
   finalList = new Nodo<T>();
-  size = 1;
+  ++size;
 }
 
 template<typename T>
@@ -74,14 +74,13 @@ void LinkedList<T>::remove(int index)
 template<typename T>
 void LinkedList<T>::printIterator(){
   it = this->beginList();
-
-  do
-  {
+  
+  while (it != this->endList()){
     cout << *(it) << " ";
     ++it;
-  } while (it != this->endList());
+  }
 
-  cout << *(it) << endl;  
+  cout << *(it) << endl;
 }
 
 template<typename T>
