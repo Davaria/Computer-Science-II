@@ -8,6 +8,7 @@ void swap(T &a, T &b)
   a = std::move(b);
   b = std::move(tmp);
 }
+
 int main()
 {
   string x{"abc"};
